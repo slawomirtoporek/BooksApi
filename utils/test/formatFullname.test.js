@@ -22,4 +22,9 @@ describe('FormatFullname', () => {
     expect(formatFullname('aMAnda doe')).to.equal('Amanda Doe');
   });
 
+  it('should return "Error" if the format of input data is not <firstname> <lastname>', () => {
+    expect(formatFullname('Doe')).to.equal('Error');
+    expect(formatFullname('John Doe Test')).to.equal('Error');
+  });
+
 });
