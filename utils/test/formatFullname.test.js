@@ -15,4 +15,11 @@ describe('FormatFullname', () => {
     expect(formatFullname()).to.equal('Error');
   });
 
+  it('should return correctly formatted fullname with proper capitalization', () => {
+    expect(formatFullname('JOHN DOE')).to.equal('John Doe');
+    expect(formatFullname('JOHN doE')).to.equal('John Doe');
+    expect(formatFullname('amanda doe')).to.equal('Amanda Doe');
+    expect(formatFullname('aMAnda doe')).to.equal('Amanda Doe');
+  });
+
 });
